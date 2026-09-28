@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9f8;
+  color : #17212b;
+}
+
+button,input,select{
+  font-family: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* dashboard layout */
+
+.dashboard{
+  display: flex;
+  overflow: hidden;
+  background: #f7f9f8;
+  height: 100vh;
+  width: 100%;
+}
+

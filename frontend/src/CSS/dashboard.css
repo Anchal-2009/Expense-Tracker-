@@ -1,0 +1,756 @@
+/* dashboard */
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #f7f9f8;
+}
+
+.dashboard-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 35px 20px 35px;
+  box-sizing: border-box;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.welcome-section h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #101820;
+  margin: 0;
+}
+
+.welcome-section p {
+  margin: 0;
+  font-size: 15px;
+  color: #8b9599;
+}
+
+.add-transaction-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #16a34a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.add-transaction-button:hover {
+  background: #12833c;
+}
+
+.dashboard-content {
+  padding: 28px 30px 40px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.summary-card {
+  background: #ffffff;
+  border: 1px solid #e8edeb;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 116px;
+}
+
+.summary-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.summary-card p {
+  font-size: 14px;
+  color: #879292;
+  margin-bottom: 7px;
+}
+
+.summary-card h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #172128;
+}
+
+.summary-bottom {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #e05252;
+}
+
+.dashboard-row {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1.4fr 1fr;
+  margin-bottom: 14px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #e8edeb;
+  border-radius: 8px;
+  padding: 17px;
+  min-width: 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #20292e;
+}
+
+.card-header p {
+  font-size: 11px;
+  margin-top: 4px;
+  color: #8e9899;
+}
+
+.card-header select {
+  height: 27px;
+  padding: 0 7px;
+  border: 1px solid #e1e7e5;
+  border-radius: 5px;
+  background: white;
+  font-size: 12px;
+  color: #555;
+}
+
+/* income vs expense */
+
+.income-expense-chart {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+/* expense by category */
+
+.expense-category-wrapper {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.expense-category-chart {
+  width: 230px;
+  height: 230px;
+  position: relative;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.donut-center strong {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #172126;
+}
+
+.donut-center span {
+  margin-top: 3px;
+  font-size: 9px;
+  color: #899294;
+}
+
+.category-list {
+  width: 130px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #667174;
+}
+
+.category-item strong {
+  font-size: 13px;
+  color: #424b4e;
+}
+
+.category-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.food {
+  background: #16a34a;
+}
+
+.transport {
+  background: #3b82f6;
+}
+
+.shopping {
+  background: #d99a31;
+}
+
+.bills {
+  background: #a45b8a;
+}
+
+.others {
+  background: #8b9494;
+}
+
+/* recent transactions */
+
+.bottom {
+  grid-template-columns: 1.5fr 1fr;
+  margin-bottom: -10px;
+}
+
+.view-all-button {
+  background: #f8f8f8;
+  border: none;
+  padding: 8px;
+  font-size: 11px;
+}
+
+.view-all-button:hover {
+  background: #159447;
+  color: white;
+}
+
+.recent-transactions {
+  width: 100%;
+  overflow: hidden;
+}
+
+.recent-transaction-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1.2fr 1.2fr;
+  padding: 12px 10px;
+  border-bottom: 1px solid #edf0ef;
+  font-size: 10px;
+  color: #8b9595;
+}
+
+.recent-transaction-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1.2fr 1.2fr;
+  padding: 10px;
+  min-height: 55px;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f2;
+  font-size: 11px;
+  color: #687274;
+}
+
+.recent-transaction-row:last-child {
+  border-bottom: none;
+}
+
+.transaction-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #273033;
+  font-weight: 500;
+}
+
+.transaction-row > strong,
+.transaction-row > span {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.transaction-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-icon.grocery {
+  background: #eaf8ef;
+}
+
+.transaction-icon.salary {
+  background: #e9f4fc;
+}
+
+.transaction-icon.transport {
+  background: #fff5df;
+}
+
+.transaction-icon.shopping {
+  background: #f9eafa;
+}
+
+.transaction-icon.bills {
+  background: #fceaea;
+}
+
+.expense-amount {
+  font-weight: 600;
+  color: #e05252;
+}
+
+.income-amount {
+  font-weight: 600;
+  color: #159447;
+}
+
+/* budget overview */
+
+.budget-overview {
+  width: 100%;
+}
+
+.budget-overview-item {
+  margin-top: 18px;
+}
+
+.budget-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  font-size: 12px;
+  color: #4f595b;
+}
+
+.budget-info span:last-child {
+  font-size: 10px;
+  color: #737d7e;
+}
+
+.budget-overview-progress {
+  width: 90%;
+  height: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #edf1ef;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #159447;
+}
+
+.budget-percent {
+  text-align: right;
+  margin-top: 4px;
+  font-size: 10px;
+  color: #8a9394;
+}
+
+.view-btn {
+  background: #f8f8f8;
+  margin-top: 40px;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.view-btn:hover {
+  background: #159447;
+  color: white;
+}
+
+/* Responsive design */
+
+/* tablet */
+
+@media (max-width: 1277px) {
+  .dashboard-header {
+    padding: 26px 25px 20px;
+  }
+
+  .dashboard-content {
+    padding: 24px 22px 35px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .income-expense-chart {
+    width: 100%;
+  }
+
+  .expense-category-wrapper {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .dashboard-header {
+    width: 100%;
+    padding: 20px 18px 16px;
+    gap: 14px;
+    box-sizing: border-box;
+  }
+
+  .welcome-section {
+    min-width: 0;
+  }
+
+  .welcome-section h1 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .welcome-section p {
+    font-size: 13px;
+  }
+
+  .add-transaction-button {
+    width: auto;
+    max-width: max-content;
+    height: 36px;
+    padding: 0 12px;
+    gap: 5px;
+    font-size: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    padding: 18px 15px 30px;
+    box-sizing: border-box;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .summary-card {
+    min-width: 0;
+  }
+
+  .summary-card h2 {
+    font-size: 18px;
+  }
+
+  .summary-card p {
+    font-size: 13px;
+  }
+
+  .summary-bottom {
+    font-size: 12px;
+  }
+
+  .dashboard-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .card-header {
+    gap: 10px;
+  }
+
+  .card-header > div {
+    min-width: 0;
+  }
+
+  .card-header select {
+    flex-shrink: 0;
+  }
+
+  .income-expense-chart {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .expense-category-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    justify-content: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .expense-category-chart {
+    flex-shrink: 0;
+    max-width: 190px;
+    max-height: 190px;
+  }
+
+  .category-list {
+    flex-shrink: 0;
+  }
+
+  .recent-transactions {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .recent-transaction-table-header,
+  .recent-transaction-row {
+    min-width: 520px;
+  }
+
+  .budget-overview {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .budget-info {
+    gap: 10px;
+  }
+
+  .budget-info span:first-child {
+    min-width: 0;
+  }
+
+  .budget-info span:last-child {
+    white-space: nowrap;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 18px 12px 14px;
+    gap: 10px;
+  }
+
+  .welcome-section h1 {
+    font-size: 18px;
+  }
+
+  .welcome-section p {
+    font-size: 11px;
+  }
+
+  .add-transaction-button {
+    height: 20px;
+    padding: 0 10px;
+    font-size: 4px;
+  }
+
+  .dashboard-content {
+    padding: 14px 10px 25px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .summary-card {
+    padding: 13px;
+    min-height: 105px;
+  }
+
+  .summary-card p {
+    font-size: 11px;
+  }
+
+  .summary-card h2 {
+    font-size: 16px;
+  }
+
+  .summary-bottom {
+    font-size: 10px;
+  }
+
+  .dashboard-card {
+    padding: 14px;
+  }
+
+  .card-header {
+    gap: 8px;
+  }
+
+  .card-header h3 {
+    font-size: 14px;
+  }
+
+  .card-header p {
+    font-size: 10px;
+  }
+
+  .card-header select {
+    height: 27px;
+    max-width: 90px;
+    font-size: 10px;
+  }
+
+  .income-expense-chart {
+    height: 220px;
+  }
+
+  .expense-category-wrapper {
+    height: 220px;
+    gap: 10px;
+  }
+
+  .expense-category-chart {
+    width: 155px;
+    height: 155px;
+  }
+
+  .category-list {
+    width: 95px;
+    gap: 8px;
+  }
+
+  .category-item {
+    font-size: 10px;
+  }
+
+  .category-item strong {
+    font-size: 10px;
+  }
+
+  .recent-transaction-table-header,
+  .recent-transaction-row {
+    min-width: 500px;
+  }
+
+  .budget-info {
+    font-size: 10px;
+  }
+
+  .budget-info span:last-child {
+    font-size: 9px;
+  }
+
+  .budget-overview-progress {
+    width: 88%;
+  }
+}
+
+/* Very small phones */
+
+@media (max-width: 360px) {
+  .dashboard-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .welcome-section h1 {
+    font-size: 16px;
+  }
+
+  .welcome-section p {
+    font-size: 10px;
+  }
+
+  .add-transaction-button {
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .dashboard-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .summary-card {
+    padding: 11px;
+  }
+
+  .summary-card h2 {
+    font-size: 14px;
+  }
+
+  .summary-card p {
+    font-size: 10px;
+  }
+
+  .summary-bottom {
+    font-size: 9px;
+  }
+
+  .dashboard-card {
+    padding: 11px;
+  }
+}

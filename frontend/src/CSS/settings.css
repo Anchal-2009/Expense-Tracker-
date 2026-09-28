@@ -1,0 +1,419 @@
+/* Settings */
+
+.settings-page {
+  padding: 20px 24px 30px;
+  max-width: 950px;
+}
+
+.settings-card {
+  background: white;
+  border: 1px solid #e5e9e7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.settings-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.settings-heading-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #eaf7ef;
+  color: #159447;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-heading h3 {
+  margin: 0;
+  color: #17212b;
+  font-size: 15px;
+}
+
+.settings-heading p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 10px;
+}
+
+.settings-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-form-group label {
+  color: #59636c;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.settings-form-group input,
+.settings-form-group select {
+  height: 38px;
+  border: 1px solid #e1e6e3;
+  border-radius: 7px;
+  padding: 0 11px;
+  font-size: 11px;
+  color: #374151;
+  background: white;
+  outline: none;
+}
+
+.settings-form-group input:focus,
+.settings-form-group select:focus {
+  border-color: #159447;
+}
+
+.settings-save-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-settings-button {
+  height: 38px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 7px;
+  background: #159447;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.save-settings-button:hover {
+  background: #117a3a;
+}
+
+.settings-account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.account-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.account-info-item span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.account-info-item strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.custom-alert {
+  position: fixed !important;
+  top: 20px;
+  right: 20px;
+  left: auto !important;
+  width: 350px;
+  max-width: calc(100vw - 40px);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 99999;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  animation: slideDown 0.3s ease;
+}
+
+.custom-alert.success {
+  background: #eaf8ef;
+  color: #15803d;
+  border: 1px solid #b7e4c7;
+}
+
+.custom-alert.error {
+  background: #fdecec;
+  color: #dc2626;
+  border: 1px solid #f5b5b5;
+}
+
+.custom-alert button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .settings-page {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 22px 30px;
+    box-sizing: border-box;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+
+  .custom-alert {
+    top: 20px;
+    right: 20px;
+    left: auto !important;
+    width: 340px;
+    max-width: calc(100vw - 40px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .settings-page {
+    width: 100%;
+    max-width: none;
+    padding: 18px 15px 30px;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 65px;
+  }
+
+  .settings-card {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .settings-heading {
+    gap: 9px;
+    margin-bottom: 18px;
+  }
+
+  .settings-heading-icon {
+    width: 33px;
+    height: 33px;
+    min-width: 33px;
+  }
+
+  .settings-heading h3 {
+    font-size: 14px;
+  }
+
+  .settings-heading p {
+    font-size: 9px;
+  }
+
+  .settings-form-grid {
+    gap: 14px;
+  }
+
+  .settings-form-group {
+    gap: 5px;
+  }
+
+  .settings-form-group label {
+    font-size: 10px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .settings-account-info {
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .account-info-item {
+    padding: 11px 0;
+  }
+
+  .account-info-item span {
+    font-size: 11px;
+  }
+
+  .account-info-item strong {
+    font-size: 12px;
+  }
+
+  .settings-save-area {
+    justify-content: flex-start;
+  }
+
+  .save-settings-button {
+    height: 38px;
+    padding: 0 14px;
+  }
+
+  .custom-alert {
+    top: 15px;
+    right: 15px;
+    left: auto !important;
+    width: 320px;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 14px 10px 25px;
+    position: relative;
+    padding-top: 65px;
+  }
+
+  .settings-card {
+    padding: 14px;
+    border-radius: 9px;
+  }
+
+  .settings-heading {
+    margin-bottom: 16px;
+  }
+
+  .settings-heading-icon {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+  }
+
+  .settings-heading h3 {
+    font-size: 13px;
+  }
+
+  .settings-heading p {
+    font-size: 8px;
+  }
+
+  .settings-form-grid {
+    gap: 12px;
+  }
+
+  .settings-form-group label {
+    font-size: 9px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group select {
+    height: 37px;
+    padding: 0 9px;
+    font-size: 10px;
+  }
+
+  .settings-account-info {
+    margin-top: 16px;
+    gap: 10px;
+  }
+
+  .account-info-item {
+    padding: 10px 0;
+  }
+
+  .account-info-item span {
+    font-size: 10px;
+  }
+
+  .account-info-item strong {
+    font-size: 11px;
+  }
+
+  .save-settings-button {
+    width: 100%;
+    justify-content: center;
+    height: 37px;
+    font-size: 10px;
+  }
+
+  .custom-alert {
+    top: 15px;
+    right: 15px;
+    left: auto !important;
+    width: 300px;
+    max-width: calc(100vw - 30px);
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .custom-alert button {
+    font-size: 18px;
+  }
+}
+
+/* Very small phones */
+
+@media (max-width: 360px) {
+  .settings-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .settings-card {
+    padding: 12px;
+  }
+
+  .settings-heading h3 {
+    font-size: 12px;
+  }
+
+  .settings-heading p {
+    font-size: 8px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group select {
+    height: 36px;
+    font-size: 9px;
+  }
+
+  .account-info-item span {
+    font-size: 9px;
+  }
+
+  .account-info-item strong {
+    font-size: 10px;
+  }
+}
