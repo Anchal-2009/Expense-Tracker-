@@ -58,13 +58,13 @@ router.post("/login", async (req, res) => {
 
     //validate
     if (!email || !password) {
-      return res.json({ message: "All fields are required" });
+      return res.status(401).json({ message: "All fields are required" });
     }
 
     //finduser
     const user = await User.findOne({ email });
     if (!user) {
-      return res.json({ message: "Incorrect password or email" });
+      return res.status(401).json({ message: "Incorrect password or email" });
     }
 
     //compare password
